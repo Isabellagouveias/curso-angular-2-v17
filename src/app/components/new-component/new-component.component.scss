@@ -1,0 +1,13 @@
+h2 {
+  background: blueviolet;
+}
+
+:host {
+  h2 {
+    background: yellow;
+  }
+}
+
+h2 {
+  background: purple;
+}
