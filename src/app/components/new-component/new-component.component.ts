@@ -14,4 +14,6 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class NewComponent {}
+export class NewComponent {
+  public name = 'Isa';
+}

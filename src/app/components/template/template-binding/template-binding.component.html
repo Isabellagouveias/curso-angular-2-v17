@@ -1,0 +1,53 @@
+<h2>template</h2>
+<h3>text interpolation</h3>
+<p>{{ name }} - {{ age }}</p>
+<p>{{ 1 + 1 }}</p>
+<p>{{ condition }}</p>
+
+<hr />
+
+<h2>Property binding</h2>
+<button [disabled]="isDisabeld">Button</button>
+<img [src]="srcValue" [alt]="name" [title]="name" />
+
+<h2>Attribue binding</h2>
+<p [attr.title]="name" [attr.aria-label]="name">Dener Troquatte</p>
+
+<h2>Class and style binding</h2>
+<p [class.background-red]="age > 22" [class.background-blue]="age < 22">
+  {{ name }}
+</p>
+
+<p [style.text-decoration]="isTextDecoration">{{ age }}</p>
+
+<h2>Event binding</h2>
+<button (click)="sum()">+</button>
+<button (click)="sub()">-</button>
+<h1>input</h1>
+<input (keydown.shift.t)="onKeyDown($event)" />
+
+<div
+  style="background-color: red; width: 300px; height: 300px; margin-top: 10px"
+  (mousemove)="onMouseMove($event)"
+></div>
+
+<h3>Two-way binding</h3>
+<input [(ngModel)]="name" />
+
+{{ name }}
+
+<hr />
+
+<h3>Diretivas de atributos</h3>
+<div [ngClass]="{ 'background-red': age > 22, 'background-blue': age < 22 }">
+  Classes condicionais
+</div>
+
+<div
+  [ngStyle]="{
+    color: age > 20 ? 'red' : 'blue',
+    'font-size': age > 20 ? '10px' : '20px'
+  }"
+>
+  Estilo dinâmico
+</div>
